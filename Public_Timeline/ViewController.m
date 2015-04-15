@@ -60,7 +60,13 @@
         }
     });
 }
-
+-(void)Alert
+{
+    
+    UIAlertView *alert= [[UIAlertView alloc]initWithTitle:@"No Internet" message:@"Internet connection problem" delegate:self cancelButtonTitle:@"Okay"otherButtonTitles:nil];
+    [alert show];
+    
+}
 - (void)fetchedData:(NSData *)responseData
 {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
