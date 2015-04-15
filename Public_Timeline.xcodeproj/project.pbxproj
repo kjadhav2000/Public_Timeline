@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		277A62061ADEB73B00F7DAFD /* i3lPe6u5B0M.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 277A62051ADEB73B00F7DAFD /* i3lPe6u5B0M.jpg */; };
 		279C7C9E1ADD4B2F00029B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C7C9D1ADD4B2F00029B2E /* main.m */; };
 		279C7CA11ADD4B2F00029B2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C7CA01ADD4B2F00029B2E /* AppDelegate.m */; };
 		279C7CA41ADD4B2F00029B2E /* Public_Timeline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 279C7CA21ADD4B2F00029B2E /* Public_Timeline.xcdatamodeld */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		277A62051ADEB73B00F7DAFD /* i3lPe6u5B0M.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = i3lPe6u5B0M.jpg; sourceTree = "<group>"; };
 		279C7C981ADD4B2F00029B2E /* Public_Timeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Public_Timeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279C7C9C1ADD4B2F00029B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279C7C9D1ADD4B2F00029B2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		279C7C9B1ADD4B2F00029B2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				277A62051ADEB73B00F7DAFD /* i3lPe6u5B0M.jpg */,
 				8BB4A3991ADE4A200031DEAD /* QuartzCore.framework */,
 				8BB4A39B1ADE4EF10031DEAD /* MBProgressHUD.h */,
 				8BB4A39C1ADE4EF10031DEAD /* MBProgressHUD.m */,
@@ -230,6 +233,7 @@
 				279C7CAF1ADD4B2F00029B2E /* LaunchScreen.xib in Resources */,
 				279C7CD21ADD99C700029B2E /* loading.png in Resources */,
 				279C7CAC1ADD4B2F00029B2E /* Images.xcassets in Resources */,
+				277A62061ADEB73B00F7DAFD /* i3lPe6u5B0M.jpg in Resources */,
 				279C7CD01ADD999700029B2E /* no_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
