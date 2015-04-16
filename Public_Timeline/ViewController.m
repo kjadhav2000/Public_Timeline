@@ -50,32 +50,33 @@
     hud.labelText = @"Loading";
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         NSData* data = [NSData dataWithContentsOfURL:PublicTimelineURL];
-        if (data) {
+      //  if (data) {
             [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
-        }
-        else
-        {
+      //  }
+      //  else
+     //   {
             // NSLog(@" error data is nil");
-            [self performSelectorInBackground:@selector(Alert) withObject:nil];
-        }
+      //      [self performSelectorInBackground:@selector(Alert) withObject:nil];
+     //   }
     });
 }
--(void)Alert
-{
-    
-    UIAlertView *alert= [[UIAlertView alloc]initWithTitle:@"No Internet" message:@"Internet connection problem" delegate:self cancelButtonTitle:@"Okay"otherButtonTitles:nil];
-    [alert show];
-    
-}
+//-(void)Alert
+//{
+//    
+//    UIAlertView *alert= [[UIAlertView alloc]initWithTitle:@"No Internet" message:@"Internet connection problem" delegate:self cancelButtonTitle:@"Okay"otherButtonTitles:nil];
+//    [alert show];
+//    
+//}
 - (void)fetchedData:(NSData *)responseData
 {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
-    NSError* error;
-    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:responseData
-                                                         options:kNilOptions
-                                                           error:&error];
-    postData = [json valueForKey:@"data"];
-    if (postData) {
+    if (responseData) {
+        NSError* error;
+        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:responseData
+                                                             options:kNilOptions
+                                                               error:&error];
+        postData = [json valueForKey:@"data"];
+
         
         for (NSMutableDictionary *Dict in postData) {
             NSMutableDictionary *UserInfo=[Dict valueForKey:@"user"];
@@ -86,6 +87,12 @@
             [post_time addObject:[Dict objectForKey:@"created_at"]];
         }
         [Timeline_tableView reloadData];
+    }
+    else
+    {
+        // NSLog(@" error data is nil");
+        UIAlertView *alert= [[UIAlertView alloc]initWithTitle:@"Unable to load data" message:@"Internet connection problem" delegate:self cancelButtonTitle:@"Okay"otherButtonTitles:nil];
+        [alert show];
     }
 }
 
